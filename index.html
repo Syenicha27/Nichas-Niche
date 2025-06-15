@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>nicha niche</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap-4.4.1.css" rel="stylesheet">
+    <link href="css/micss.css" rel="stylesheet">
+  
+
+	<style>
+	  body{
+		  background-color:#CAEFEE;
+		}
+	  </style>
+	</head>
+  <body>
+
+    <!-- Navbar -->
+  <nav class="navbar custom-navbar shadow">
+  <div class="navbar-content">
+    <a class="navbar-brand" href="index.html">
+      <img src="fotos/mi logo.png" alt="mi logo" width="50" class="img-fluid">
+    </a>
+    <ul class="navbar-nav flex-row">
+      <li class="nav-item mx-2"><a class="nav-link" href="index.html">Home</a></li>
+      <li class="nav-item mx-2"><a class="nav-link" href="about.html">About</a></li>
+      <li class="nav-item mx-2"><a class="nav-link" href="gallery.html">Gallery</a></li>
+      <li class="nav-item mx-2"><a class="nav-link" href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+	  
+ 
+ <!-- Miss Niches Header -->
+<div class="banner-container">
+  <img src="fotos/miss niches (1).png" alt="Miss Niches" class="banner-image">
+<img src="fotos/arch.png" class="floating-img" style="top: 40px; left: 60px;" alt="Icono de carpeta vintage">
+<img src="fotos/ball 1.png" class="floating-img" style="top: 90px; right: 100px;" alt="Bola de billar número uno">
+<img src="fotos/blueberry.png" class="floating-img" style="bottom: 120px; left: 120px;" alt="Blueberry grande flotando">
+<img src="fotos/snoopy.png" class="floating-img" style="top: 220px; left: 30px;" alt="Sticker de Snoopy bordado">
+<img src="fotos/star 2.png" class="floating-img" style="top: 300px; right: 80px;" alt="Estrella amarilla con borde azul">
+<img src="fotos/tv.png" class="floating-img" style="bottom: 60px; right: 140px;" alt="Televisor retro apagado">
+</div>
+
+<hr>
+    <!-- Carrusel -->
+   <div class="container mt-5 pt-5">
+  <div id="mainCarousel" class="carousel slide mx-auto shadow rounded overflow-hidden" data-ride="carousel" data-interval="3000">
+
+    <ol class="carousel-indicators custom-indicators">
+      <li data-target="#mainCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#mainCarousel" data-slide-to="1"></li>
+      <li data-target="#mainCarousel" data-slide-to="2"></li>
+      <li data-target="#mainCarousel" data-slide-to="3"></li>
+    </ol>
+
+    <div class="carousel-inner" style="height: 500px;">
+      <div class="carousel-item active">
+        <img class="d-block w-100 h-100" style="object-fit: cover;" src="fotos/wallpaper.jpg" alt="Primera imagen">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100 h-100" style="object-fit: cover;" src="fotos/gatos.jpg" alt="Segunda imagen">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100 h-100" style="object-fit: cover;" src="fotos/mitski.jpg" alt="Tercera imagen">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100 h-100" style="object-fit: cover;" src="fotos/mosaicos.jpg" alt="Cuarta imagen">
+      </div>
+    </div>
+
+    <a class="carousel-control-prev" href="#mainCarousel" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Anterior</span>
+    </a>
+    <a class="carousel-control-next" href="#mainCarousel" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Siguiente</span>
+    </a>
+  </div>
+</div>
+    <!-- Contenido con columnas -->
+	  <div class="container mt-5">
+      <div class="row card-row d-flex justify-content-center text-center">
+  
+  <a href="https://annas-archive.org/" target="_blank" class="col-6 col-md-3 card-hover text-center text-decoration-none">
+    <img src="fotos/book.png" class="img-fluid mb-3" style="height: 200px; object-fit: cover;" alt="Book">
+    <p class="card-label">Read with me</p>
+  </a>
+
+  <a href="https://open.spotify.com/playlist/1YRBSvhEHJHuAxIPkCYcjR?si=GbSdQK_RQjGUU1AQAOYSVw" target="_blank" class="col-6 col-md-3 card-hover text-center text-decoration-none">
+    <img src="fotos/headphones.png" class="img-fluid mb-3" style="height: 200px; object-fit: cover;" alt="Music">
+    <p class="card-label">Jam with me</p>
+  </a>
+
+  <a href="https://www.princess-movies.com/" target="_blank" class="col-6 col-md-3 card-hover text-center text-decoration-none">
+    <img src="fotos/tv.png" class="img-fluid mb-3" style="height: 200px; object-fit: cover;" alt="Watch">
+    <p class="card-label">Watch with me</p>
+  </a>
+
+</div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-light text-center py-3 mt-5">
+      &copy; Nichas's Niche | 2025
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap-4.4.1.js"></script>
+	<script>
+  const draggables = document.querySelectorAll('.floating-img');
+
+  draggables.forEach(img => {
+    let isDragging = false;
+    let offsetX = 0;
+    let offsetY = 0;
+
+    img.addEventListener('mousedown', (e) => {
+      isDragging = true;
+      offsetX = e.clientX - img.getBoundingClientRect().left;
+      offsetY = e.clientY - img.getBoundingClientRect().top;
+      img.style.cursor = 'grabbing';
+    });
+
+    document.addEventListener('mousemove', (e) => {
+      if (!isDragging) return;
+      img.style.left = (e.clientX - offsetX) + 'px';
+      img.style.top = (e.clientY - offsetY) + 'px';
+    });
+
+    document.addEventListener('mouseup', () => {
+      isDragging = false;
+      img.style.cursor = 'grab';
+    });
+  });
+</script>
+<script>
+  $('#mainCarousel').carousel({
+    interval: 2000,
+    ride: 'carousel',   
+    pause: false        
+  });
+</script>
+	
+
+
+
+  </body>
+</html>
